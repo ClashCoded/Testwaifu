@@ -8,7 +8,7 @@ interface PreviewProps {
 
 const Preview: React.FC<PreviewProps> = ({ lootbox, isOwned = false }) => {
   const { images, name, video } = lootbox
-  const previewImageSrc = `/images/nfts/electricegg.png`
+  const previewImageSrc = `/images/nfts/WaifustationGacha.gif`
 
   if (video) {
     const videoComponent = (

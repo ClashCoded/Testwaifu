@@ -137,12 +137,17 @@
   color: white;
   transform: translateY(-6px);
   transition: all 0.1s ease-in-out;
+  user-select: none;
 }
-.lootbox-button-span:disabled, .lootbox-button-styled:disabled {
+.lootbox-button-styled:disabled {
   cursor: not-allowed;
 }
-.lootbox-button-styled:active .lootbox-button-span {
+
+.lootbox-button-span:hover {
   transform: translateY(-2px);
+}
+.lootboxcard-p {
+  margin: 1rem 0 1.2rem 0;
 }
 .details-p {
   text-align: center;
@@ -153,7 +158,9 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding-bottom: 5%;
+  padding: 5%;
+  background-color: #272727;
+  border-radius: 25px;
 }
 .gacha-preview-video {
   height: 100%;

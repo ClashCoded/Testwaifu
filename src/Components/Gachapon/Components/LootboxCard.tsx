@@ -120,15 +120,15 @@ const LootboxCard: React.FC<LootboxCardProps> =  ({ price, probabilities, id, lo
 <div className="lootboxcard-container">
         <h1 className="lootboxcard-title">{name}</h1>
         <Preview lootbox={lootbox} />
-        <p>Price = {price} WaifuToken</p>
+        <p className="lootboxcard-p">Price = {price} WaifuToken</p>
         <button className="lootbox-button-styled" onClick={() => buyLootboxHandler(id, price)} disabled={buttonDisabled}>
-          <span className="lootbox-button-span">
+          <span className="lootbox-button-span" >
           {buttonText}
           </span>
         </button>
         <div className="lootboxcard-footer">
           <button className="lootboxcard-details" onClick={handleClick}>
-              Details
+              Details 
           </button>
           {isOpen && (
             <div className="info-block">
