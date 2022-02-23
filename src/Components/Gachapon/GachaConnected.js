@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import orderBy from 'lodash/orderBy'
-import { useEggFactory } from '../hooks/useContract'
+// import { useEggFactory } from '../hooks/useContract'
 import LootBoxs from '../config/constants/LootBox'
 import LootboxCard from "./Components/LootboxCard"
 
@@ -10,18 +10,18 @@ const GachaConnected = () => {
     const [prices, setPrices] = useState([1, 2, 3])
     const [probabilities, setProbabilities] = useState([[4, 5, 6], [4, 5, 3], [1, 2, 6]])
     const [asyncFetched, setAsyncFetched] = useState(false)
-    const contract = useEggFactory()
+    // const contract = useEggFactory()
 
-    if (!asyncFetched) {
-        contract.methods.getLootboxPrices().call().then((data) => {
-            setAsyncFetched(true)
-            contract.methods.getLootboxProbabilities().call().then((data2) => {
-                // setProbabilities(data2)
-                // setPrices(data)
-                // setLootboxs(orderBy(LootBoxs, 'sortOrder'))
-            })
-        })
-    }
+    // if (!asyncFetched) {
+    //     contract.methods.getLootboxPrices().call().then((data) => {
+    //         setAsyncFetched(true)
+    //         contract.methods.getLootboxProbabilities().call().then((data2) => {
+    //             // setProbabilities(data2)
+    //             // setPrices(data)
+    //             // setLootboxs(orderBy(LootBoxs, 'sortOrder'))
+    //         })
+    //     })
+    // }
     let i = 0;
 
     return (
