@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { useCandy, useEggFactory, useEggToken } from '../../hooks/useContract'
-import { getEggFactoryAddress } from '../../utils/addressHelpers'
-import { getWeb3 } from "../../utils/web3"
+// import { useCandy, useEggFactory, useEggToken } from '../../hooks/useContract'
+// import { getEggFactoryAddress } from '../../utils/addressHelpers'
+// import { getWeb3 } from "../../utils/web3"
 import { LootBox } from '../../config/constants/types'
 import Preview from './Preview'
 
@@ -25,80 +25,80 @@ const LootboxCard: React.FC<LootboxCardProps> =  ({ price, probabilities, id, lo
 
   const { name } = lootbox
 
-  const ct = useCandy()
-  const ef = useEggFactory()
-  const et = useEggToken()
-  const w3 = getWeb3()
+  // const ct = useCandy()
+  // const ef = useEggFactory()
+  // const et = useEggToken()
+  // const w3 = getWeb3()
 
   const buyLootboxHandler = (i, p) => {
     setButtonDisabled(true)
     setButtonText('Gachaing...')
 
     let previousBalance
-    et.methods
-      .balanceOf(w3.givenProvider.selectedAddress)
-      .call()
-      .then((bal) => {
-        previousBalance = bal
-      })
+    // et.methods
+    //   .balanceOf(w3.givenProvider.selectedAddress)
+    //   .call()
+    //   .then((bal) => {
+    //     previousBalance = bal
+    //   })
 
-    ct.methods
-      .allowance(w3.givenProvider.selectedAddress, getEggFactoryAddress())
-      .call()
-      .then((data) => {
-        if (data < p) {
-          ct.methods
-            .approve(getEggFactoryAddress(), 100000000)
-            .send({ from: w3.givenProvider.selectedAddress })
-            .then(() => {
-              ef.methods
-                .buyLootbox(i)
-                .send({ from: w3.givenProvider.selectedAddress })
-                .then((reciept) => {
-                  et.methods
-                    .getUserEggs(w3.givenProvider.selectedAddress)
-                    .call()
-                    .then((mintedIds) => {
-                      if (mintedIds.length > previousBalance) {
-                        const newEggId = mintedIds[mintedIds.length - 1]
-                        et.methods
-                          .getEggFromMintedId(newEggId)
-                          .call()
-                          .then((data2) => {
-                            setRewardMessage([data2[0], data2[1], data2[2]])
-                            setPopUpVisible(true)
-                            setButtonDisabled(false)
-                            setButtonText('Gacha!')
-                          })
-                      }
-                    })
-                })
-            })
-        } else {
-          ef.methods
-            .buyLootbox(i)
-            .send({ from: w3.givenProvider.selectedAddress })
-            .then((reciept) => {
-              et.methods
-                .getUserEggs(w3.givenProvider.selectedAddress)
-                .call()
-                .then((mintedIds) => {
-                  if (mintedIds.length > previousBalance) {
-                    const newEggId = mintedIds[mintedIds.length - 1]
-                    et.methods
-                      .getEggFromMintedId(newEggId)
-                      .call()
-                      .then((data2) => {
-                        setRewardMessage([data2[0], data2[1], data2[2]])
-                        setPopUpVisible(true)
-                        setButtonDisabled(false)
-                        setButtonText('Gacha!')
-                      })
-                  }
-                })
-            })
-        }
-      })
+    // ct.methods
+    //   .allowance(w3.givenProvider.selectedAddress, getEggFactoryAddress())
+    //   .call()
+    //   .then((data) => {
+    //     if (data < p) {
+    //       ct.methods
+    //         .approve(getEggFactoryAddress(), 100000000)
+    //         .send({ from: w3.givenProvider.selectedAddress })
+    //         .then(() => {
+    //           ef.methods
+    //             .buyLootbox(i)
+    //             .send({ from: w3.givenProvider.selectedAddress })
+    //             .then((reciept) => {
+    //               et.methods
+    //                 .getUserEggs(w3.givenProvider.selectedAddress)
+    //                 .call()
+    //                 .then((mintedIds) => {
+    //                   if (mintedIds.length > previousBalance) {
+    //                     const newEggId = mintedIds[mintedIds.length - 1]
+    //                     et.methods
+    //                       .getEggFromMintedId(newEggId)
+    //                       .call()
+    //                       .then((data2) => {
+    //                         setRewardMessage([data2[0], data2[1], data2[2]])
+    //                         setPopUpVisible(true)
+    //                         setButtonDisabled(false)
+    //                         setButtonText('Gacha!')
+    //                       })
+    //                   }
+    //                 })
+    //             })
+    //         })
+    //     } else {
+    //       ef.methods
+    //         .buyLootbox(i)
+    //         .send({ from: w3.givenProvider.selectedAddress })
+    //         .then((reciept) => {
+    //           et.methods
+    //             .getUserEggs(w3.givenProvider.selectedAddress)
+    //             .call()
+    //             .then((mintedIds) => {
+    //               if (mintedIds.length > previousBalance) {
+    //                 const newEggId = mintedIds[mintedIds.length - 1]
+    //                 et.methods
+    //                   .getEggFromMintedId(newEggId)
+    //                   .call()
+    //                   .then((data2) => {
+    //                     setRewardMessage([data2[0], data2[1], data2[2]])
+    //                     setPopUpVisible(true)
+    //                     setButtonDisabled(false)
+    //                     setButtonText('Gacha!')
+    //                   })
+    //               }
+    //             })
+    //         })
+    //     }
+      // })
 
     // ct.methods.approve(getEggFactoryAddress(), p).send({ from: w3.givenProvider.selectedAddress }).then(() => {
     //     ef.methods.buyLootbox(i).send({ from: w3.givenProvider.selectedAddress }).then((reciept) => {
