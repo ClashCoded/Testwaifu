@@ -1,0 +1,246 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18vh;
+  width: 100%;
+  background-color: #1b1b1b;
+  border-bottom: 3px solid #525252;
+  overflow: hidden;
+}
+.header .desktop {
+  display: flex;
+}
+.a-button {
+  text-decoration: none;
+  z-index: 2;
+}
+.header .mobile {
+  display: none;
+}
+.logo {
+  width: 4%;
+  object-fit: contain;
+}
+.navbar2 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  right: 2rem;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible;
+  font-family: "Jua";
+}
+.navbar3 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  right: -1.5rem;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible;
+  font-family: "Jua";
+}
+.language-container {
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+.english-button {
+  background-image: url('/images/us.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 25px;
+  border: none;
+  width: 40px;
+  height: 30px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.chinese-button {
+  background-image: url('/images/cn.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 25px;
+  border: none;
+  width: 40px;
+  height: 30px;
+  margin-right: 1rem;
+}
+.navbar2 li {
+  overflow: visible;
+}
+.navbar3 li {
+  overflow: visible;
+}
+.nav-items {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+}
+.nav-items::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  top: 100%;
+  transition: all 0.25s ease-in-out;
+}
+.nav-items:hover::before {
+  width: 100%;
+}
+.nav-items:hover {
+  color: white;
+}
+.header_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-left: 2rem;
+}
+.header_icon {
+  font-size: 25px;
+  border-radius: 50%;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-li {
+  width: 12%;
+}
+.logo-nav {
+  object-fit: contain;
+  width: 100%;
+  max-width: 87%;
+}
+.fa-discord {
+  background-color: #5865f2;
+}
+.fa-twitter {
+  background-color: #1d9bef;
+}
+@media screen and (max-width: 992px) {
+  .header {
+    justify-content: space-between;
+    padding-inline: 35px;
+  }
+  .header .desktop {
+    display: none;
+  }
+  .header .mobile {
+    display: block;
+  }
+  .a-button {
+    display: none;
+  }
+  .logo {
+    width: 12%;
+    position: relative;
+    right: 1rem;
+  }
+  .fa-times,
+  .fa-bars {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .navbar2 {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    height: 100%;
+    justify-content: flex-start;
+    width: 40vw;
+    align-items: flex-start;
+    padding: 50px 20px !important;
+    transition: all 0.35s ease-in-out;
+    right: -100vw;
+    opacity: 0;
+    z-index: 2;
+    display: none;
+  }
+  .navbar3 {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    height: 100%;
+    justify-content: flex-start;
+    width: 40vw;
+    align-items: flex-start;
+    padding: 50px 20px !important;
+    transition: all 0.35s ease-in-out;
+    right: -100vw;
+    opacity: 0;
+    z-index: 2;
+    display: none;
+  }
+  .language-container {
+    flex-direction: column;
+  }
+  .english-button {
+    width: 40px;
+    height: 30px;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  .chinese-button {
+    width: 40px;
+    height: 30px;
+    margin-right: 0rem;
+  }
+  .nav-items {
+    font-size: 1.4rem;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    width: 100%;
+    overflow: visible;
+  }
+  .nav-items::before {
+    content: "";
+    height: 0%;
+  }
+  .open {
+    right: 0;
+    opacity: 1;
+  }
+  .block {
+    display: flex;
+  }
+}
+@media screen and (max-width: 762px) {
+  .logo {
+    width: 18%;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .logo {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navbar2 {
+    width: 60vw;
+  }
+  .navbar3 {
+    width: 60vw;
+  }
+}

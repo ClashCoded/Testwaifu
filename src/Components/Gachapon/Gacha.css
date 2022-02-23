@@ -1,0 +1,645 @@
+.gacha * {
+  overflow: visible;
+}
+.gacha {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../../Assets/Images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 20px 0px;
+}
+.gacha-connected {
+  height: auto;
+  width: 100%;
+  display: flex;
+  min-height: 120vh;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../../Assets/Images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 20px 0px;
+}
+.gacha h1 {
+  color: #212529;
+  font-size: 5rem;
+  font-family: "Changa";
+  width: 44%;
+  text-transform: uppercase;
+  margin: 3rem 0;
+  overflow: visible;
+}
+.gacha-p {
+  color: #212529;
+  font-size: 1.4rem;
+  width: 50%;
+  font-family: "Jua";
+}
+.btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow: visible;
+}
+.gacha_create {
+  background-color: #686868;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  width: 190px;
+  height: 50px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  text-transform: uppercase;
+}
+.gacha_connect {
+  font-family: "Jua";
+  border: none;
+  border-radius: 25px;
+  color: white;
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #fa3f62;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+.gacha_connect:hover,
+.gacha_mint:hover {
+  /* opacity: 0.8; */
+  transform: scale(1.2);
+}
+
+.gacha-connected-title {
+  font-family: "Changa";
+  font-size: 4rem;
+  width: 50%;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  margin: 0 auto;
+
+}
+/* lootbox card container ----------------------------------- */
+.lootboxcard-container {
+  font-family: "Jua";
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: 0px 0px 15px 0px;
+  background-color: #ffccff;
+}
+.lootboxcard-title {
+  font-family: "Changa";
+  font-size: 3rem;
+}
+.lootboxcard-details {
+  height: auto;
+  margin-top: 10px;
+  border: transparent;
+  background-color: transparent;
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+}
+.lootboxcard-details:hover:not(:disabled):not(:active) {
+  background-color: #fbfbfb;
+  opacity: 0.5;
+}
+.lootbox-button-styled {
+  background: hsl(340deg 100% 32%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  width: 100%;
+}
+.lootbox-button-span {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: hsl(345deg 100% 47%);
+  color: white;
+  transform: translateY(-6px);
+  transition: all 0.1s ease-in-out;
+}
+.lootbox-button-span:disabled, .lootbox-button-styled:disabled {
+  cursor: not-allowed;
+}
+.lootbox-button-styled:active .lootbox-button-span {
+  transform: translateY(-2px);
+}
+.details-p {
+  text-align: center;
+  position: relative;
+  top: 20px;
+}
+.gacha-preview-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 5%;
+}
+.gacha-preview-video {
+  height: 100%;
+  width: 100%;
+}
+.gacha-preview-image {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 1s linear;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px;
+}
+.nft-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.nft-page {
+  min-height: calc(100vh - 64px);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.nft-grid {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  grid-gap: 60px;
+  min-height: 100vh;
+  justify-content: center;
+}
+/* card-mine styling ------------------------------------- */
+.gacha_card-mine-div * {
+  overflow: visible !important;
+}
+.gacha_card-mine-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+  width: 100%;
+  overflow: visible;
+  height: 400px;
+  position: relative;
+}
+.gacha_card-mine-div-connected {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  overflow: visible;
+  height: 400px;
+  position: relative;
+}
+.slide:hover {
+  transform: translateY(-60px) scale(1.2);
+}
+.slide-track:hover {
+  animation-play-state: paused;
+}
+.card-mine-img {
+  width: 80%;
+  object-fit: contain;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+}
+.card-mine-title {
+  align-self: flex-start;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Jua";
+}
+.card-mine-lower {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+.number {
+  color: #a8a8a8;
+  font-family: "Jua";
+}
+.yellow {
+  background-color: #fdffb6;
+  font-family: "Jua";
+}
+.blue {
+  background-color: #9cf6ff;
+  font-family: "Jua";
+}
+.orange {
+  background-color: #ffd7a6;
+  font-family: "Jua";
+}
+.green {
+  background-color: #cbffbf;
+  font-family: "Jua";
+}
+.pink {
+  background-color: #ffccff;
+  font-family: "Jua";
+}
+.red {
+  background-color: #ffaead;
+  font-family: "Jua";
+}
+.iridescent {
+  background: linear-gradient(to right, #9cf6ff, #ffaead , #ffd7a6, #fdffb6, #cbffbf, #9cf6ff);
+  font-family: "Jua";
+}
+.god {
+  background-color: #272727;
+  font-family: "Jua";
+}
+.rarity {
+  color: #272727;
+  padding: 3px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+.rarity-g {
+  color: #fbfbfb;
+  padding: 3px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+.gacha-desc {
+  color: #212529;
+  font-size: 1.3rem;
+  width: 45%;
+  margin-top: 3rem;
+  font-family: "Jua";
+}
+/* timer styling ---------------------- */
+.timer-div {
+  font-family: "Jua";
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 60px;
+  margin-top: 1.5rem;
+  background-color: #212529;
+  padding: 20px 30px;
+  border-radius: 20px;
+}
+.time-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.time-box h2:first-child {
+  text-decoration: underline;
+  font-size: 1.6rem;
+}
+.time-box h2 {
+  color: white;
+}
+/* Mint Styling --------------------------- */
+.progress-minting-container {
+  /* background-color: rgba(27, 27, 27, 1); */
+  border-radius: 25px;
+  width: 40%;
+  margin-bottom: 8rem;
+  border-style: solid;
+  border-color: #fcfcfc;
+  /* box-shadow:  0px 8px 10px #fcfcfc, 
+  -10px 8px 15px #fcfcfc, 10px 8px 15px #fcfcfc; */
+  background: linear-gradient(55deg, #fbfbfb, #272727, #1b1b1b, #fcfcfc);
+  background-size: 800% 800%;
+  -webkit-animation: BGAnimation 15s ease infinite;
+  -moz-animation: BGAnimation 15s ease infinite;
+  -o-animation: BGAnimation 15s ease infinite;
+  animation: BGAnimation 15s ease infinite; 
+}
+@-webkit-keyframes BGAnimation {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
+}
+@-moz-keyframes BGAnimation {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
+}
+@-o-keyframes BGAnimation {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
+}
+@keyframes BGAnimation {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
+  
+}
+.minting-title {
+  font-size: 2.5rem;
+  font-family: "Changa";
+  color: #fbfbfb;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.minting-subtitle {
+  font-size: 1.5rem;
+  font-family: "Changa";
+  color: #fbfbfb;
+  margin-bottom: 3rem;
+}
+.minting-gif {
+  width: 50%;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+}
+.minting-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 60%;
+  margin: 3rem auto;
+  background-color: #272727;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5%;
+  transition: all 0.25s ease-in-out;
+}
+.minting-container:hover {
+transform: scale(1.1);
+ }
+.display-price {
+  font-family: "Jua";
+  border: none;
+  border-radius: 25px;
+  color: white;
+  width: 100px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+.mint-p{
+  color: #fcfcfc;
+  font-size: 1.5rem;
+  font-family: "Jua";
+  padding: 11px;
+  margin: 0 auto;
+}
+.eth-font {
+font-family: "Roboto";
+}
+
+.gacha_mint {
+  position: relative;
+  top: 2rem;
+  font-family: "Jua";
+  border: none;
+  border-radius: 25px;
+  color: white;
+  width: 300px;
+  height: 100px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #fa3f62;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+.styledinput {
+  color: #272727;
+  font-family: "Jua";
+  text-align: center;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 25px;
+}
+.inputcssfix {
+  margin-left: auto;
+}
+/* .inputstyle{
+} */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.styledsidebutton {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-family: "Jua";
+  border: none;
+  border-radius: 15px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #fa3f62;
+}
+/* ProgressBar Styling --------------------------- */
+.RSPBprogressBar {
+  height: 10px;
+  line-height: 1;
+  border-radius: 10px;
+  position: relative;
+  width: 90%;
+  margin: auto auto 2.5% auto;
+  background-color: rgba(211, 211, 211, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0; }
+  .RSPBprogressBar .RSPBstep {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    position: absolute;
+    transform: translateX(-50%);
+    transition-property: all;
+    transition-timing-function: ease; }
+  .RSPBprogressBar .RSPBprogressBarText {
+    color: #fcfcfc;
+    font-family: "Jua";
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .RSPBprogressBar .RSPBprogression {
+    position: absolute;
+    transition: width 0.3s ease;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: rgba(0, 116, 217, 0.8);
+    z-index: -1; }
+
+
+@media screen and (max-width: 1300px) {
+  .gacha h1 {
+    width: 80%;
+  }
+  .gacha-p {
+    width: 50%;
+  }
+  .gacha-desc {
+    width: 65%;
+  }
+  .progress-minting-container {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 710px) {
+  .gacha h1 {
+    font-size: 3rem;
+  }
+  .gacha-p {
+    width: 60%;
+  }
+  .gacha-desc {
+    width: 85%;
+    font-size: 1rem;
+  }
+  .progress-minting-container {
+
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .timer-div {
+    gap: 40px;
+  }
+  .time-box h2 {
+    font-size: 1.3rem !important;
+  }
+  .progress-minting-container {
+    width: 100%;
+  }
+  .minting-container {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 444px) {
+  .btn-div {
+    gap: 20px;
+  }
+  .gacha_connect,
+  .gacha_mint {
+    width: 150px;
+    font-size: 1.1rem;
+  }
+  .timer-div {
+    padding: 20px 8px;
+    gap: 20px;
+  }
+  .time-box h2 {
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 426px) {
+  .gacha h1 {
+    width: 90%;
+    font-size: 2rem;
+  }
+  .gacha-p {
+    width: 80%;
+  }
+  .gacha-desc {
+    width: 85%;
+  }
+  .marquee--inner {
+    animation-duration: 7s;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 8));
+  }
+}
+.slider {
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
+.sliderConnect {
+  height: auto;
+  position: relative;
+  width: 252%;
+}
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 16);
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 220px;
+  height: 280px;
+  text-align: left;
+  gap: 10px;
+  padding: 10px 0px;
+  border-radius: 25px;
+  /* transform: translateY(50px); */
+  /* opacity: 0; */
+  padding-top: 30px;
+  overflow: visible;
+  transition: all 0.25s ease-in-out;
+  margin-right: 2rem;
+}

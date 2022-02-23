@@ -1,0 +1,98 @@
+.footer * {
+  overflow: visible;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  height: auto;
+  width: 100%;
+  background-color: #1b1b1b;
+  border-bottom: 3px solid #525252;
+  border-top: 3px solid #525252;
+  padding: 3rem 0rem;
+  font-family: "Jua";
+}
+.footer_social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-left: 2rem;
+}
+.footer_icon {
+  font-size: 25px;
+  border-radius: 50%;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a-footer-button {
+  text-decoration: none;
+}
+.foot-items {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+}
+.foot-items::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  top: 100%;
+  transition: all 0.25s ease-in-out;
+}
+.foot-items:hover::before {
+  width: 100%;
+}
+.foot-items:hover {
+  color: white;
+}
+.foot-logo {
+  width: 6%;
+  object-fit: contain;
+}
+.foot_navbar2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+@media screen and (max-width: 992px) {
+  .footer_social {
+    padding-left: 0;
+  }
+
+}
+@media screen and (max-width: 840px) {
+  .foot-logo {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .foot-logo {
+    width: 20%;
+  }
+  .foot-items {
+    font-size: 1.3rem;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 0rem;
+  }
+  .foot_navbar2 {
+    flex-direction: column;
+  }
+}
