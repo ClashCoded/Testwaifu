@@ -97,8 +97,10 @@
   padding: 20px;
   border-radius: 20px;
   width: 100%;
-  box-shadow: 0px 0px 15px 0px;
-  background-color: #ffccff;
+  position: relative;
+  /* background-image: url("/images/nfts/gachaponmachine.png");
+  background-repeat: no-repeat;
+  background-position-x: center; */
 }
 .lootboxcard-title {
   font-family: "Changa";
@@ -120,18 +122,22 @@
   opacity: 0.5;
 }
 .lootbox-button-styled {
+  position: relative;
   background: hsl(340deg 100% 32%);
-  border-radius: 12px;
+  border-radius: 50%;
   border: none;
   padding: 0;
   cursor: pointer;
   outline-offset: 4px;
-  width: 100%;
+  width: 105px;
+  height: 105px;
+  margin-top: 4%;
 }
 .lootbox-button-span {
   display: block;
-  padding: 12px 42px;
-  border-radius: 12px;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
   font-size: 1.25rem;
   background: hsl(345deg 100% 47%);
   color: white;
@@ -146,8 +152,14 @@
 .lootbox-button-span:hover {
   transform: translateY(-2px);
 }
+.lootbox-button-p {
+  position: relative;
+  top: 35%;
+}
 .lootboxcard-p {
-  margin: 1rem 0 1.2rem 0;
+  position: relative;
+  top: 6%;
+  margin-top: 10%;
 }
 .details-p {
   text-align: center;
@@ -156,8 +168,9 @@
 }
 .gacha-preview-container {
   position: relative;
-  width: 100%;
+  width: 50%;
   overflow: hidden;
+  margin: 0 auto;
   padding: 5%;
   background-color: #272727;
   border-radius: 25px;
@@ -165,6 +178,14 @@
 .gacha-preview-video {
   height: 100%;
   width: 100%;
+}
+.gachapon-puller {
+  width: 80%;
+}
+.gachapon-components {
+  position: absolute;
+  top: 13%;
+  right: -0.1%;
 }
 .gacha-preview-image {
   position: relative;
@@ -191,10 +212,7 @@
 .nft-grid {
   display: flex;
   flex-direction: row;
-  padding-bottom: 24px;
-  padding-top: 24px;
-  grid-gap: 60px;
-  min-height: 100vh;
+  /* grid-gap: 60px; */
   justify-content: center;
 }
 /* card-mine styling ------------------------------------- */

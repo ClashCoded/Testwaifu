@@ -117,16 +117,20 @@ const LootboxCard: React.FC<LootboxCardProps> =  ({ price, probabilities, id, lo
   let i = 0
   return (
     <div>
+  <h1 className="lootboxcard-title">{name}</h1>
 <div className="lootboxcard-container">
-        <h1 className="lootboxcard-title">{name}</h1>
+  <img className="gachapon-puller"src="/images/nfts/GachaponMachine.png" />
+  <div className="gachapon-components">
+    
         <Preview lootbox={lootbox} />
-        <p className="lootboxcard-p">Price = {price} WaifuToken</p>
+        <p className="lootboxcard-p">Price = {price} ETH</p>
         <button className="lootbox-button-styled" onClick={() => buyLootboxHandler(id, price)} disabled={buttonDisabled}>
           <span className="lootbox-button-span" >
-          {buttonText}
+            <p className="lootbox-button-p">   {buttonText}</p>
+          
           </span>
         </button>
-        <div className="lootboxcard-footer">
+        {/* <div className="lootboxcard-footer">
           <button className="lootboxcard-details" onClick={handleClick}>
               Details 
           </button>
@@ -141,6 +145,7 @@ const LootboxCard: React.FC<LootboxCardProps> =  ({ price, probabilities, id, lo
               <br />
               </div>
           )}
+        </div> */}
         </div>
       </div>
     </div>

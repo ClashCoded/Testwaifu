@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import "./Gacha.css";
 import orderBy from 'lodash/orderBy'
 // import { useEggFactory } from '../hooks/useContract'
 import LootBoxs from '../config/constants/LootBox'
@@ -7,7 +8,7 @@ import LootboxCard from "./Components/LootboxCard"
 
 const GachaConnected = () => {
     const [lootboxs, setLootboxs] = useState([{name: "Gachapon 1"}, {name: "Gachapon 2"}, {name: "Gachapon 3"}])
-    const [prices, setPrices] = useState([1, 2, 3])
+    const [prices, setPrices] = useState([0.01, 0.1, 1])
     const [probabilities, setProbabilities] = useState([[4, 5, 6], [4, 5, 3], [1, 2, 6]])
     const [asyncFetched, setAsyncFetched] = useState(false)
     // const contract = useEggFactory()
