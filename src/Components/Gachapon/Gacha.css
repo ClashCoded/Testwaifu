@@ -129,14 +129,14 @@
   padding: 0;
   cursor: pointer;
   outline-offset: 4px;
-  width: 105px;
-  height: 105px;
+  width: 5.9vw;
+  height: 5.9vw;
   margin-top: 4%;
 }
 .lootbox-button-span {
   display: block;
-  width: 105px;
-  height: 105px;
+  width: 5.9vw;
+  height: 5.9vw;
   border-radius: 50%;
   font-size: 1.25rem;
   background: hsl(345deg 100% 47%);
@@ -158,8 +158,8 @@
 }
 .lootboxcard-p {
   position: relative;
-  top: 6%;
-  margin-top: 10%;
+  margin-top: 8%;
+  margin-bottom: 0.9rem;
 }
 .details-p {
   text-align: center;
@@ -184,8 +184,8 @@
 }
 .gachapon-components {
   position: absolute;
-  top: 13%;
-  right: -0.1%;
+  top: 14%;
+  right: 0.4%;
 }
 .gacha-preview-image {
   position: relative;
@@ -538,8 +538,24 @@ margin: 0;
   .gacha-desc {
     width: 65%;
   }
+  .gacha-connected-title {
+    font-size: 2.5rem;
+    width: 80%;
+  }
+  .lootboxcard-title {
+    font-size: 2rem;
+  }
   .progress-minting-container {
     width: 65%;
+  }
+  .lootbox-button-styled {
+    width: 6.5vw;
+    height: 6.5vw;
+    margin-top: 2%;
+  }
+  .lootbox-button-span {
+    width: 6.5vw;
+    height: 6.5vw;
   }
 }
 @media screen and (max-width: 710px) {
@@ -553,9 +569,29 @@ margin: 0;
     width: 85%;
     font-size: 1rem;
   }
+  .gacha-preview-container {
+    width: 50%;
+  }
+  .gachapon-components {
+    left: 0.4%;
+  }
+  .nft-grid {
+    flex-direction: column;
+    /* grid-gap: 60px; */
+  }
   .progress-minting-container {
 
     width: 80%;
+  }
+
+  .lootbox-button-styled {
+    width: 6.5vw;
+    height: 6.5vw;
+    margin-top: 2%;
+  }
+  .lootbox-button-span {
+    width: 6.5vw;
+    height: 6.5vw;
   }
 }
 @media screen and (max-width: 600px) {
