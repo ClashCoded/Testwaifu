@@ -117,6 +117,46 @@
   width: 100%;
   transition: all 0.25s ease-in-out;
 }
+.rotating-lootbox-button {
+  position: relative;
+  top: 10%;
+  background-image: url("/images/nfts/GachaponMachineKnob.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  width: 55%;
+  background-color: transparent;
+  height: 7vw;
+  border: none;
+  transition: all 0.25s ease-in-out;
+}
+
+
+.rotating-lootbox-button:hover {
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */ 
+   /* transform: rotate(.03turn);  */
+   transition: all 0.25s ease-in-out;
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+.rotating-lootbox-button:disabled {
+  animation: none;
+}
+
+
 .lootboxcard-details:hover:not(:disabled):not(:active) {
   background-color: #fbfbfb;
   opacity: 0.5;
@@ -159,7 +199,9 @@
 .lootboxcard-p {
   position: relative;
   margin-top: 8%;
-  margin-bottom: 0.9rem;
+  margin-bottom: 4%;
+  /* margin-bottom: 0.9rem; */
+ 
 }
 .details-p {
   text-align: center;

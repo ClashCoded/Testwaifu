@@ -124,11 +124,14 @@ const LootboxCard: React.FC<LootboxCardProps> =  ({ price, probabilities, id, lo
     
         <Preview lootbox={lootbox} />
         <p className="lootboxcard-p">Price = {price} ETH</p>
-        <button className="lootbox-button-styled" onClick={() => buyLootboxHandler(id, price)} disabled={buttonDisabled}>
+        {/* <button className="lootbox-button-styled" onClick={() => buyLootboxHandler(id, price)} disabled={buttonDisabled}>
           <span className="lootbox-button-span" >
             <p className="lootbox-button-p">   {buttonText}</p>
           
           </span>
+        </button> */}
+        <button className="rotating-lootbox-button" onClick={() => buyLootboxHandler(id,price)} disabled={buttonDisabled}>
+
         </button>
         {/* <div className="lootboxcard-footer">
           <button className="lootboxcard-details" onClick={handleClick}>
