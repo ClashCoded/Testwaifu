@@ -101,12 +101,13 @@
   /* background-image: url("/images/nfts/gachaponmachine.png");
   background-repeat: no-repeat;
   background-position-x: center; */
+  transition: all 0.25s ease-in-out;
 }
 .lootboxcard-title {
   font-family: "Changa";
   font-size: 3rem;
 }
-.lootboxcard-details {
+/* .lootboxcard-details {
   height: auto;
   margin-top: 10px;
   border: transparent;
@@ -116,7 +117,7 @@
   cursor: pointer;
   width: 100%;
   transition: all 0.25s ease-in-out;
-}
+} */
 .rotating-lootbox-button {
   position: relative;
   background-image: url("/images/nfts/GachaponMachineKnob.png");
@@ -126,7 +127,8 @@
   width: 25%; 
   background-color: transparent;
   height: 6vw;
-  border: none;
+  border-color: transparent;
+  border-radius: 50%;
   transition: all 0.25s ease-in-out;
 }
 .rotating-lootbox-button:active {
@@ -160,11 +162,37 @@
   }
   
 }
+@keyframes hovercircle {
+  0% {
+    border-color: #D8C978;
+    transform:rotate(0deg)
+  }
+  20% {
+    border-color: #D8C978;
+    transform:rotate(20deg)
+  }
+  40% {
+    border-color: #fa3f62;
+    transform:rotate(40deg)
+  }
+  60% {
+    border-color: #fa3f62;
+    transform:rotate(40deg)
+  }
+  80% {
+    border-color: #D8C978;
+    transform:rotate(20deg)
+  }
+  100% {
+    border-color: #D8C978;
+    transform:rotate(0deg)
+  }
+}
 
 
 .rotating-lootbox-button:hover {
-  animation-name: pulse;
-  animation-duration: 2000ms;
+  animation-name: hovercircle;
+  animation-duration: 1000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
   /* transform: rotate(3deg); */
@@ -173,6 +201,8 @@
    /* transform: rotate(.03turn);  */
    transition: all 0.25s ease-in-out;
 }
+
+
 .rotating-lootbox-button:disabled {
   animation-name: spin;
   animation-duration: 5000ms;
@@ -186,7 +216,7 @@
 }
 
 
-.lootboxcard-details:hover:not(:disabled):not(:active) {
+/* .lootboxcard-details:hover:not(:disabled):not(:active) {
   background-color: #fbfbfb;
   opacity: 0.5;
 }
@@ -220,7 +250,7 @@
 
 .lootbox-button-span:hover {
   transform: translateY(-2px);
-}
+} */
 .lootbox-button-p {
   position: relative;
   top: 35%;

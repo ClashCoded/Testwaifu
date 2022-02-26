@@ -131,7 +131,7 @@ const LootboxCard: React.FC<LootboxCardProps> =  ({ price, probabilities, id, lo
           </span>
         </button> */}
         <button className="rotating-lootbox-button" onClick={() => buyLootboxHandler(id,price)} disabled={buttonDisabled}>
-
+      
         </button>
         {/* <div className="lootboxcard-footer">
           <button className="lootboxcard-details" onClick={handleClick}>
