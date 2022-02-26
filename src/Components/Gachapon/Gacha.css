@@ -164,27 +164,33 @@
 }
 @keyframes hovercircle {
   0% {
-    border-color: #D8C978;
+    border: solid 5px;
+    border-color: #272727;
     transform:rotate(0deg)
   }
   20% {
-    border-color: #D8C978;
+    border: solid 5px;
+    border-color: #272727;
     transform:rotate(20deg)
   }
   40% {
-    border-color: #fa3f62;
+    border: solid 5px;
+    border-color: #ffccff;
     transform:rotate(40deg)
   }
   60% {
-    border-color: #fa3f62;
+    border: solid 5px;
+    border-color: #ffccff;
     transform:rotate(40deg)
   }
   80% {
-    border-color: #D8C978;
+    border: solid 5px;
+    border-color: #272727;
     transform:rotate(20deg)
   }
   100% {
-    border-color: #D8C978;
+    border: solid 5px;
+    border-color: #272727;
     transform:rotate(0deg)
   }
 }
