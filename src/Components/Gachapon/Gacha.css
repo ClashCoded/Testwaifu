@@ -123,15 +123,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 25%;
+  width: 25%; 
   background-color: transparent;
   height: 6vw;
   border: none;
   transition: all 0.25s ease-in-out;
 }
-
-
-.rotating-lootbox-button:hover {
+.rotating-lootbox-button:active {
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -150,8 +148,41 @@
       transform:rotate(360deg);
   }
 }
+@keyframes pulse {
+  0% {
+      transform:scale(1);
+  }
+  50% {
+      transform:scale(1.2);
+  }
+  100% {
+    transform:scale(1);
+  }
+  
+}
+
+
+.rotating-lootbox-button:hover {
+  animation-name: pulse;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */ 
+   /* transform: rotate(.03turn);  */
+   transition: all 0.25s ease-in-out;
+}
 .rotating-lootbox-button:disabled {
-  animation: none;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */ 
+   /* transform: rotate(.03turn);  */
+   transition: all 0.25s ease-in-out;
 }
 
 
@@ -198,6 +229,9 @@
   position: relative;
   margin-top: 8%;
   margin-bottom: 6%;
+  text-align: left;
+  width: 50%;
+  margin-left: 25%;
   /* margin-bottom: 0.9rem; */
  
 }

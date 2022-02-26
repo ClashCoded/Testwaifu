@@ -123,7 +123,7 @@ const LootboxCard: React.FC<LootboxCardProps> =  ({ price, probabilities, id, lo
   <div className="gachapon-components">
     
         <Preview lootbox={lootbox} />
-        <p className="lootboxcard-p">Price = {price} ETH</p>
+        <p className="lootboxcard-p">{price} ETH</p>
         {/* <button className="lootbox-button-styled" onClick={() => buyLootboxHandler(id, price)} disabled={buttonDisabled}>
           <span className="lootbox-button-span" >
             <p className="lootbox-button-p">   {buttonText}</p>
