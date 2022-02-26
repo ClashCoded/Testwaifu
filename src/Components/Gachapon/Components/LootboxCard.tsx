@@ -119,7 +119,7 @@ const LootboxCard: React.FC<LootboxCardProps> =  ({ price, probabilities, id, lo
     <div>
   <h1 className="lootboxcard-title">{name}</h1>
 <div className="lootboxcard-container">
-  <img className="gachapon-puller"src="/images/nfts/GachaponMachine.png" />
+  <img className="gachapon-puller"src="/images/nfts/GachaponMachine2.png" />
   <div className="gachapon-components">
     
         <Preview lootbox={lootbox} />
