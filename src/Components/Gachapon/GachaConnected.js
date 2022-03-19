@@ -26,7 +26,7 @@ const GachaConnected = () => {
     let i = 0;
 
     return (
-        <div className="gacha-connected">
+        <div className="gacha-connected" >
         <div className="nft-container">
         <div className="nft-page">
             <h1 className="gacha-connected-title">Try your luck with one of the randomized lootboxes!</h1>

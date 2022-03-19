@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Yeyey";
+  src: url('/font/Yeyey.otf')
+}
 .gacha * {
   overflow: visible;
 }
@@ -21,7 +25,7 @@
   min-height: 120vh;
   justify-content: center;
   flex-direction: column;
-  background-image: url("../../Assets/Images/background.jpg");
+  background-image: url("/images/nfts/GachaWaifustation.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -83,8 +87,8 @@
 }
 
 .gacha-connected-title {
-  font-family: "Changa";
-  font-size: 4rem;
+  font-family: "Yeyey";
+  font-size: 3rem;
   width: 50%;
   padding-top: 5vh;
   padding-bottom: 5vh;
@@ -104,8 +108,8 @@
   transition: all 0.25s ease-in-out;
 }
 .lootboxcard-title {
-  font-family: "Changa";
-  font-size: 3rem;
+  font-family: "Yeyey";
+  font-size: 2rem;
 }
 /* .lootboxcard-details {
   height: auto;
@@ -136,61 +140,49 @@
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
-  /* transform: rotate(3deg); */
-   /* transform: rotate(0.3rad);/ */
-   /* transform: rotate(3grad); */ 
-   /* transform: rotate(.03turn);  */
    transition: all 0.25s ease-in-out;
 }
 @keyframes spin {
   from {
+    border: solid 5px;
+    border-color: #A3FEFE;
       transform:rotate(0deg);
   }
   to {
+    border: solid 5px;
+    border-color: #A3FEFE;
       transform:rotate(360deg);
   }
-}
-@keyframes pulse {
-  0% {
-      transform:scale(1);
-  }
-  50% {
-      transform:scale(1.2);
-  }
-  100% {
-    transform:scale(1);
-  }
-  
 }
 @keyframes hovercircle {
   0% {
     border: solid 5px;
-    border-color: #272727;
+    border-color: #CDFFBB;
     transform:rotate(0deg)
   }
   20% {
     border: solid 5px;
-    border-color: #272727;
+    border-color: #CDFFBB;
     transform:rotate(20deg)
   }
   40% {
     border: solid 5px;
-    border-color: #ffccff;
+    border-color: #FAA8AD;
     transform:rotate(40deg)
   }
   60% {
     border: solid 5px;
-    border-color: #ffccff;
+    border-color: #FAA8AD;
     transform:rotate(40deg)
   }
   80% {
     border: solid 5px;
-    border-color: #272727;
+    border-color: #CDFFBB;
     transform:rotate(20deg)
   }
   100% {
     border: solid 5px;
-    border-color: #272727;
+    border-color: #CDFFBB;
     transform:rotate(0deg)
   }
 }
@@ -263,13 +255,22 @@
 }
 .lootboxcard-p {
   position: relative;
-  margin-top: 9%;
-  margin-bottom: 5%;
-  text-align: left;
-  width: 50%;
-  margin-left: 29%;
+  margin-top: 11%;
+  margin-bottom: 4.5%;
+  text-align: center;
+  font-family: "Yeyey";
+  font-size: 1.2rem;
+  border: 1px solid;
+  border-radius: 25px;
+  background-color: #ffccff;
+  width: 22%;
+  margin-left: 26%;
+  transition: all 0.25s ease-in-out;
   /* margin-bottom: 0.9rem; */
- 
+}
+.lootboxcard-p:hover {
+  transform: scale(1.1);
+  cursor:default;
 }
 .details-p {
   text-align: center;
@@ -278,7 +279,7 @@
 }
 .gacha-preview-container {
   position: relative;
-  width: 50%;
+  width: 45%;
   overflow: hidden;
   margin: 0 auto;
   padding: 5%;
@@ -294,8 +295,8 @@
 }
 .gachapon-components {
   position: absolute;
-  top: 14%;
-  right: 0.4%;
+  top: 15%;
+  left: 0;
 }
 .gacha-preview-image {
   position: relative;
@@ -637,6 +638,33 @@ margin: 0;
     background: rgba(0, 116, 217, 0.8);
     z-index: -1; }
 
+    /* PopUpMessage Styling --------------------------- */
+    .popupmessage-background {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+    }
+    .popupmessage-modal {
+      position: relative;
+      top: 10%;
+      width: 30%;
+      height: 30%;
+    }
+    .popupmessage-video {
+      height: 100%;
+      width: 100%;
+      border-radius: 25px;
+    }
+
+    @media screen and (max-width: 1800px) {
+      .rotating-lootbox-button {
+        height: 6.8vw;
+      }
+    }
 
 @media screen and (max-width: 1300px) {
   .gacha h1 {

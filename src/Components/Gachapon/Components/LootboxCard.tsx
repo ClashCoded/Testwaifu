@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 // import { useCandy, useEggFactory, useEggToken } from '../../hooks/useContract'
 // import { getEggFactoryAddress } from '../../utils/addressHelpers'
 // import { getWeb3 } from "../../utils/web3"
+import PopUpMessage from './PopUpMessage'
 import { LootBox } from '../../config/constants/types'
 import Preview from './Preview'
 
@@ -117,6 +118,12 @@ const LootboxCard: React.FC<LootboxCardProps> =  ({ price, probabilities, id, lo
   let i = 0
   return (
     <div>
+       {rewardMessage.length > 0 ? (
+        <PopUpMessage message={rewardMessage} visibility={popUpVisible} setVisibility={setPopUpVisible} />
+      ) : (
+        ''
+      )}
+
   <h1 className="lootboxcard-title">{name}</h1>
 <div className="lootboxcard-container">
   <img className="gachapon-puller"src="/images/nfts/GachaponMachine2.png" />
